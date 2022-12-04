@@ -12,7 +12,7 @@ import {MatButtonModule} from "@angular/material/button";
   template: `
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        <h1>WordManager</h1>
+        <h1><a mat-button [routerLink]="'/main'" style="color: white"> WordManager</a></h1>
         <span class="menu-spacer"></span>
         <div>
           <a mat-button [routerLink]="'/main'">Main</a>

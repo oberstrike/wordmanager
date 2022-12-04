@@ -1,1 +1,66 @@
-<p>WordImporter works </p>
+<div id="config" class="flex flex-col mt-4 mb-4 ml-4">
+
+  <div class="font-bold" style="font-size: 1.2rem">
+    Config
+  </div>
+
+  <div class="flex flex-row gap-3 m-2">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Source</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let language of languages" [value]="language.value">
+            {{language.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Destination</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let language of languages" [value]="language">
+            {{language.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="font-bold" style="font-size: 1.2rem">
+    Search
+  </div>
+
+  <div class="flex flex-row gap-3 m-2">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Word</mat-label>
+        <input type="text" matInput>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>WordType</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let language of languages" [value]="language">
+            {{language.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-fab color="primary">
+        <mat-icon aria-hidden="false" aria-label="Importer" fontIcon="search-icon"></mat-icon>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="gap-3 m-2">
+    <app-word-table>
+
+    </app-word-table>
+  </div>
+
+</div>
+

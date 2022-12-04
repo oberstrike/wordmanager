@@ -1,9 +1,24 @@
+<style>
+  .overview-card {
+  }
+</style>
 <section>
-
 
 
   <p>Main page works!</p>
 
-  <a [routerLink]="'/main/importer'">Importer</a>
 
+  <mat-card class="overview-card">
+    <mat-card-header class="flex justify-center">
+      <mat-card-title>Importer</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="flex justify-center">
+        <button class="hover:scale-125 flex justify-center content-center" [routerLink]="'/main/importer'" mat-mini-fab
+                color="accent" aria-label="Test">
+          <mat-icon aria-hidden="false" aria-label="Importer" fontIcon="save_alt"></mat-icon>
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </section>
